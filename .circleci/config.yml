@@ -18,7 +18,7 @@ jobs:
           command: pip3 install -r requirements.txt
       - run:
           name: build lektor
-          command: cd ./venv/MyFirst & lektor build
+          command: cd ./venv/MyFirst & lektor server & lektor build
         
 
 workflows:
