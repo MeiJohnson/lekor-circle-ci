@@ -18,7 +18,7 @@ jobs:
           command: pip3 install -r requirements.txt
       - run:
           name: build lektor
-          command: pwd & ls & cd ./MyFirst & pwd & ls & lektor build
+          command: pwd & ls & cd MyFirst & pwd & ls & lektor build
 
 workflows:
   sample: 
