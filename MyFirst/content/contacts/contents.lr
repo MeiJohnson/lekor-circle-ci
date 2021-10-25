@@ -1,0 +1,5 @@
+_model: page
+---
+title: Контакты
+---
+_template: contacts.html

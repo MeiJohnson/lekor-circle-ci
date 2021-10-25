@@ -1,0 +1,6 @@
+[project]
+name = MyFirst
+
+[servers.ghdeploy]
+name = Dev
+target = ghpages+https://MeiJohnson:d5e0fcd0ece470275114c017b2d542680901e7e6@MeiJohnson/mylektorportfolio
