@@ -17,6 +17,9 @@ jobs:
           name: install dependencies
           command: pip3 install -r requirements.txt
       - run:
+          name: inst nodejs and npm
+          command: sudo apt install nodejs & sudo apt install npm & node -v & npm -v
+      - run:
           name: build lektor
           command: cd MyFirst & lektor plugins add webpack-support & npm init -y & npm install --save-dev webpack babel-core node-sass babel-loader sass-loader css-loader url-loader style-loader file-loader extract-text-webpack-plugin & lektor build -f webpack
 
