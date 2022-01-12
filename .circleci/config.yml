@@ -27,9 +27,6 @@ jobs:
       - run:
           name: create Master to Heroku
           command: git push https://heroku:7ec9513a-37e4-44ea-b76e-f92c0eec0d36@git.heroku.com/prog7-lr4-circleci.git HEAD:master
-      - run:
-          name: Deploy Master to Heroku
-          command: git push https://heroku:7ec9513a-37e4-44ea-b76e-f92c0eec0d36@git.heroku.com/prog7-lr4-circleci.git master
 
 workflows:
   sample: 
