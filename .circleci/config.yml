@@ -1,4 +1,3 @@
-
 version: 2.1
 
 orbs:
@@ -15,7 +14,7 @@ jobs:
           pkg-manager: pip
       - run:
           name: install dependencies
-          command: pip3 install -r requirements.txt
+          command: pip3 install -r requirementxt
       - run:
           name: plugin lektor
           command: cd MyFirst & lektor plugins add webpack-support & pwd & ls
@@ -25,16 +24,12 @@ jobs:
       - run:
           name: check
           command: cd MyFirst/assets/static/gen & ls -lah
+      - run:
+          name: Deploy Master to Heroku
+          command: git push https://heroku:7ec9513a-37e4-44ea-b76e-f92c0eec0d36@git.heroku.com/prog7-lr4-circleci.git master
 
 workflows:
   sample: 
     jobs:
       - build-and-test
-deploy:
-    steps:
-      - checkout
-      - run:
-          name: Deploy Master to Heroku
-          command: |
-            git push https://heroku:7ec9513a-37e4-44ea-b76e-f92c0eec0d36@git.heroku.com/prog7-lr4-circleci.git master
 
